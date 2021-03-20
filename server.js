@@ -32,7 +32,7 @@ module.exports = function createServer() {
 
   const server = http.Server(app)
   const io = socketIO(server)
-io.set('transports', [ 'websocket' ])
+io.set('origins', '*:*');
   server.listen(80, function () {
     console.log("Server started on port 80")
   })
