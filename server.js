@@ -33,7 +33,7 @@ module.exports = function createServer() {
   const server = http.Server(app)
   const io = socketIO(server)
 
-  server.listen(80, function () {
+  server.listen(5000, function () {
     console.log("Server started on port 5000")
   })
 
