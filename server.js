@@ -45,7 +45,7 @@ module.exports = function createServer() {
 
   io.on('connection', function (socket) {
     const serverMessage = {message: "PING"}
-    let count = 11;
+    let count = 99911;
     socket.emit("server-ping", serverMessage)
     socket.on("client-pong", (data) => {
       console.log(data.message)
