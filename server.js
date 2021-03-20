@@ -50,7 +50,7 @@ module.exports = function createServer() {
     socket.on("client-pong", (data) => {
       console.log(data.message)
       if (count > 0) {
-        socket.emit("server-ping", serverMessage)
+        socket.emit("server-ping", count+" | "+serverMessage)
         count --
       }
     })
