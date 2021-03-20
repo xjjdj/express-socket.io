@@ -33,8 +33,8 @@ module.exports = function createServer() {
   const server = http.Server(app)
   const io = socketIO(server)
 
-  server.listen(5000, function () {
-    console.log("Server started on port 5000")
+  server.listen(80, function () {
+    console.log("Server started on port 80")
   })
 
   app.use(morgan('dev'))
